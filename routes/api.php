@@ -18,7 +18,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/prueba', function () { 
+Route::post('/prueba', function () { 
     /* print_r (array('hola','mundo','como', 'estas')); */
-    return array('hola','mundo','como', 'estas'); 
+    /* echo $_POST; */
+    return $_POST; 
 });
