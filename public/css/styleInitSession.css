@@ -161,3 +161,19 @@ body
   	content: 'Subir foto de perfil';
 }
 
+ul{
+	display: flex;
+}
+
+ul li{
+	list-style: none;
+	margin-right: 20px;
+}
+
+/* estilo de la pagina principal */
+
+.contenido-principal{
+	margin: auto;
+	display: table;
+}
+

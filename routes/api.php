@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/prueba', function () { 
-    /* print_r (array('hola','mundo','como', 'estas')); */
-    /* echo $_POST; */
-    return $_POST; 
-});
+Route::post('/register',[UserController::class, 'insert']);
