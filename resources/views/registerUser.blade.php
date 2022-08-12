@@ -11,11 +11,11 @@
                     <div class="campos-vacios">
                         <div class="nombre">
                             <label>Nombres (*)</label>
-                            <input type="text" class="form-control" id="Nombre" name="Nombre" class="form-control" placeholder="Ingresa tu Nombre" pattern="[A-Za-z-Zñóéíáú ]+" minlength="3" maxlength="30" required />
+                            <input type="text" class="form-control" id="nombre" name="Nombre" class="form-control" placeholder="Ingresa tu Nombre" pattern="[A-Za-z-Zñóéíáú ]+" minlength="3" maxlength="30" required />
                         </div>
                         <div class="apellido">
                             <label>Apellidos (*)</label>
-                            <input type="text" class="form-control" id="Apellido" name="Apellido"class="form-control"  placeholder="Ingresa tu Apellido" pattern="[A-Za-z-Zñóéíáú ]+" minlength="3" maxlength="30" required value>
+                            <input type="text" class="form-control" id="apellido" name="Apellido"class="form-control"  placeholder="Ingresa tu Apellido" pattern="[A-Za-z-Zñóéíáú ]+" minlength="3" maxlength="30" required value>
                         </div>		
                     </div>
                         

@@ -30,21 +30,20 @@ $(document).ready(function(){
         }
     });
 	
-	
-
+	/* Validar espacios en blanco de Nombre */
     $('.campos-vacios').on("change", '#nombre', function(){
         var name = $('#nombre').val().trim();
         var apellido = $('#apellido').val();
         name = name.split(/\s+/).join(' ');
         var html = '<div class="nombre">'+       
                         '<label>Nombres</label>'+
-                        '<input type="text" class="form-control" id="nombre" name="nombre" class="form-control"'+
+                        '<input type="text" class="form-control" id="nombre" name="Nombre" class="form-control"'+
                         'value = "'+name+'" placeholder="Ingresa tu Nombre" pattern="[A-Za-z-Zñóéíáú ]+" '+
                         ' minlength="3" maxlength="30" required />'+
                     '</div>'+
                     '<div class="apellido">'+
                         '<label>Apellidos</label>'+
-                        '<input type="text" class="form-control" id="apellido" name="apellido"class="form-control"'+
+                        '<input type="text" class="form-control" id="apellido" name="Apellido"class="form-control"'+
                         'value = "'+apellido+'" placeholder="Ingresa tu Apellido" pattern="[A-Za-z-Zñóéíáú ]+" minlength="3" '+
                         ' maxlength="30" required value>'+
                     '</div>';
@@ -56,19 +55,20 @@ $(document).ready(function(){
         
     });
 
+    /*  Validar espacios en blanco de apellido*/
     $('.campos-vacios').on("change", '#apellido', function(){
         var apellido = $('#apellido').val().trim();
         var name = $('#nombre').val();
         apellido = apellido.split(/\s+/).join(' ');
         var html = '<div class="nombre">'+       
-                        '<label>Nombres</label>'+
-                        '<input type="text" class="form-control" id="nombre" name="nombre" class="form-control"'+
+                        '<label>Nombres (*)</label>'+
+                        '<input type="text" class="form-control" id="nombre" name="Nombre" class="form-control"'+
                         'value = "'+name+'" placeholder="Ingresa tu Nombre" pattern="[A-Za-z-Zñóéíáú ]+" '+
                         ' minlength="3" maxlength="30" required />'+
                     '</div>'+
                     '<div class="apellido">'+
-                        '<label>Apellidos</label>'+
-                        '<input type="text" class="form-control" id="apellido" name="apellido"class="form-control"'+
+                        '<label>Apellidos (*)</label>'+
+                        '<input type="text" class="form-control" id="apellido" name="Apellido"class="form-control"'+
                         'value = "'+apellido+'" placeholder="Ingresa tu Apellido" pattern="[A-Za-z-Zñóéíáú ]+" minlength="3" '+
                         ' maxlength="30" required value>'+
                     '</div>';
@@ -88,7 +88,7 @@ $(document).ready(function(){
                 alert("Tiene que escribir su nombre")
                 document.fvalida.Nombre.focus()
                 return false
-        }else if (document.fvalida.Apellido.value.length==0){
+        }/* else if (document.fvalida.Apellido.value.length==0){
                 alert("Tiene que escribir sus apellidos")
                 document.fvalida.Apellido.focus()
                 return false
@@ -120,7 +120,7 @@ $(document).ready(function(){
                 alert("Debe confirmar la contraseña")
                 document.fvalida.confirmPass.focus()
                 return false
-        }else {
+        } */else {
             // Ejemplo implementando el metodo POST:
             async function postData(url = '', datas) {
                 // Opciones por defecto estan marcadas con un *

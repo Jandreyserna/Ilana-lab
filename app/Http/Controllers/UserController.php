@@ -17,6 +17,7 @@ class UserController extends Controller
         foreach ($_REQUEST as $var => $val) {
             $$var=$val;
         }
+        /* print_r($_POST); */
         $resultado = DB::select("SELECT * FROM users WHERE Documento = '$Documento' OR Correo = '$Correo'");
     
         if (!empty($resultado)){
